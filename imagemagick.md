@@ -1,5 +1,6 @@
 # imagemagick
 imagemagick 是可以用于图像批处理的工具。
+https://imagemagick.org/
 ## 安装
 ```sh
 # windows

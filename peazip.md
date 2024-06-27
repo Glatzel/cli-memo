@@ -1,5 +1,6 @@
 # peazip
 peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gzip，zstd等工具。
+http://www.peazip.org/
 ## 安装
 ```sh
 # windows

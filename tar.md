@@ -1,5 +1,6 @@
 # tar
-tar 是用于创建和解压归档文件的命令行工具
+tar 是用于创建和解压归档文件的命令行工具。
+https://www.gnu.org/software/tar/
 ## 安装
 ```sh
 # windows
