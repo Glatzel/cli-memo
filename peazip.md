@@ -1,3 +1,23 @@
+# peazip
+peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gzip，zstd等工具。
+## 安装
+```sh
+# windows
+winget install --source winget -i --id Giorgiotani.Peazip
+```
+## 添加到powshell
+将以下内容写入我的文档`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
+```sh
+function 7z { 
+    try { & "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe" $args }
+    catch { Write-Error "Peazip is not installed." } 
+}
+function zstd {
+    try { & "$env:ProgramFiles/PeaZip/res/bin/zstd/zstd.exe" $args }
+    catch { Write-Error "Peazip is not installed." } 
+}
+```
+---
 # 7z
 
 # zstd

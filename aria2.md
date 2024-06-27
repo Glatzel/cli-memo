@@ -1,3 +1,14 @@
+# aria2
+aria2 是一个用于下载文件的工具。
+https://aria2.github.io/
+
+## 安装
+```sh
+# windows
+winget install --source winget -i --id aria2.aria2
+```
+---
+# 下载
 ```sh
 # 单文件
 aria2c -c -s 5 -d $download_to_dir $url

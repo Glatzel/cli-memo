@@ -1,3 +1,11 @@
+# ffmpeg
+ffmpeg 是处理音频文件的工具。
+## 安装
+```sh
+# windows
+winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
+```
+---
 # 常用参数
 ```sh
 -i # 设定输入流 

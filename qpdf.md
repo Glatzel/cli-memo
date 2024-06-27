@@ -1,3 +1,14 @@
+# qpdf
+qpdf 可以完成对pdf的常用操作，如：合并，拆分，加密等.
+## 添加到powshell
+将以下内容写入我的文档`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
+```sh
+function qpdf {
+    try {& "$env:ProgramFiles/qpdf/bin/qpdf.exe" $args}
+    catch {Write-Error "Peazip is not installed."}
+}
+```
+---
 # 合并
 ```sh
 qpdf --pages *.pdf -- out.pdf
