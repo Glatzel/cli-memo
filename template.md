@@ -1,6 +1,6 @@
 # clitool
 描述
-官网
+https://imagemagick.org/
 ## 安装
 ```sh
 # windows
