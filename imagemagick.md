@@ -5,7 +5,7 @@ imagemagick 是可以用于图像批处理的工具。
 # windows
 winget install --source winget -i --id ImageMagick.ImageMagick # Q16-HDR, 仅支持16bit图像
 ```
-
+---
 # 压缩图片
 ```sh
 magick input.png -resize 800x600 -quality 92 output.jpg
