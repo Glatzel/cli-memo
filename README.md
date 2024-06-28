@@ -60,7 +60,7 @@ https://ffmpeg.org/
 # windows
 winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 ```
-# 主要参数
+## 主要参数
 ```sh
 -i # 设定输入流 
 -f # 设定输出格式
