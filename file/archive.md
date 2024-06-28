@@ -1,5 +1,15 @@
 # 压缩
 ## 7z
+### bzip2
+```sh
+```
+### lz4
+```sh
+```
+### lzma2
+```sh
+```
+### zip
 ```sh
 ```
 ## tar
@@ -21,7 +31,16 @@ Remove-Item "archive.tar" # remove temp tar file.
 ```
 ---
 # 解压
-## 7z
+### bzip2
+```sh
+```
+### lz4
+```sh
+```
+### lzma2
+```sh
+```
+### zip
 ```sh
 ```
 ## tar
