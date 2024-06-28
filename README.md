@@ -56,13 +56,13 @@ winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 -aspect # 设定画面的比例
 -r # 设定帧速率，默认为25
 -s # 设定画面的宽与高
--vcodec/-c:v # 设定视频编解码器，未设定时则使用与输入流相同的编解码器
+-vcodec -c:v # 设定视频编解码器，未设定时则使用与输入流相同的编解码器
 -vn # 无视频
 
 # 音频参数
 -ar # 音频采样率
 -ac # 设定声音的Channel数
--acodec/-c:a # 设定声音编解码器，未设定时则使用与输入流相同的编解码器
+-acodec -c:a # 设定声音编解码器，未设定时则使用与输入流相同的编解码器
 -an # 无音频
 ```
 ---
@@ -75,7 +75,18 @@ https://imagemagick.org/
 # windows
 winget install --source winget -i --id ImageMagick.ImageMagick # Q16-HDR, 仅支持16bit图像
 ```
-
+## 主要参数
+### 图像尺寸
+https://imagemagick.org/script/command-line-processing.php#:~:text=the%20geometry%20argument.-,size,-General%20description%20(actual
+```sh
+"200%" # 放大2倍
+"200x50%" # 200px宽，高度缩放为50% 
+"200" # 宽度200px，高度按比例缩放
+"x200" # 高度200px，宽度按比例缩放
+"200x100" # 按比例缩放到目标尺寸200px*100px，取目标尺寸宽高中较大值
+"200x100^" # 按比例缩放到目标尺寸200px*100px，取目标尺寸宽高中较小值
+"200x100!" # 按缩放到目标尺寸200px*100px，宽高比例可能变化
+```
 ---
 # peazip [7z,zstd]
 peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gzip，zstd等工具。
