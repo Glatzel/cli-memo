@@ -4,6 +4,7 @@
 - 若1个输入类型a，n个输出类型情况,归类为a.md。例: 解压文件，即(archive)->Tree[FileOrDir],归类为archive。
 - 若n个输入类型，1个输出类型情况，归类为a.md。例: 为录屏文件添加背景音乐，即(video,music)->video,归类为video。
 - 若为n个输入n个输出复杂情况，如(a+b)->c+d,视情况讨论。
+
 # 模板
 ````md
 # 功能1
