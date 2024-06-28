@@ -1,7 +1,14 @@
-# 压缩图片
+# 压缩
 ```sh
 magick input.png -resize 800x600 -quality 92 output.jpg
 ```
+---
+
+# svg 转图片
+```sh
+magick -background none -size 1000x1000 a.svg target.png
+```
+
 ---
 # 堆栈
 ```sh
