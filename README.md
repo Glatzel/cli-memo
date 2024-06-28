@@ -40,7 +40,7 @@ winget install --source winget -i --id aria2.aria2
 ```
 ---
 
-# [ffmpeg](https://ffmpeg.org/)
+# [ffmpeg](https://ffmpeg.org/) [ffmpeg, ffplay, ffprobe]
 ffmpeg 是处理音频文件的工具。
 
 ## 安装
@@ -90,7 +90,7 @@ https://imagemagick.org/script/command-line-processing.php#:~:text=the%20geometr
 "200x100!" # 按缩放到目标尺寸200px*100px，宽高比例可能变化
 ```
 ---
-# [peazip](http://www.peazip.org/) [7z,zstd]
+# [peazip](http://www.peazip.org/) [7z, pea, zstd]
 peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gzip，zstd等工具。
 
 ## 安装
@@ -102,6 +102,10 @@ winget install --source winget -i --id Giorgiotani.Peazip
 ```sh
 function 7z { 
     try { & "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe" $args }
+    catch { Write-Error "Peazip is not installed." } 
+}
+function pea {
+    try { & "$env:ProgramFiles/PeaZip/pea.exe" $args }
     catch { Write-Error "Peazip is not installed." } 
 }
 function zstd {

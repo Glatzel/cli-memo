@@ -27,7 +27,7 @@ zstd -T0 -7 --long=31 file  -o "archive.zst"
 # 多文件
 7z a -ttar "-w$workdir" -bb0 -bse0 -bsp2 "archive.tar" "$folder" # pack to single tar file
 zstd -T0 -19 --long=31 "archive.tar" -o "archive.tar.zst" # pack to zst
-Remove-Item "archive.tar" # remove temp tar file.
+pea WIPE QUICK "archive.tar" # remove temp tar file.
 ```
 ---
 # 解压
@@ -56,5 +56,5 @@ zstd -d "archive.zst" -o file --long=31
 # 多文件
 zstd -d "archive.tar.zst" -o "archive.tar" --long=31 # Unpack to tar file
 7z x -aos -bb0 -bse0 -bsp2 "-o$outdir" -sccUTF-8 -snz "archive.tar" # pack to files
-Remove-Item "archive.tar" # remove temp tar file.
+pea "archive.tar" # remove temp tar file.
 ```
