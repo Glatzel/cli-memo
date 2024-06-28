@@ -31,6 +31,7 @@ Remove-Item "archive.tar" # remove temp tar file.
 ```
 ---
 # 解压
+## 7z
 ### bzip2
 ```sh
 ```
