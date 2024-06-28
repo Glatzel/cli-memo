@@ -1,8 +1,3 @@
-
-
----
----
-
 # 激活windows
 ```pwsh
 slmgr /skms $server_url #设置kms服务器地址
