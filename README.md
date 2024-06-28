@@ -1,13 +1,16 @@
 # README模板
 ````md
-# 命令行工具名称 [命令名称]
+# [命令行工具名称](官网链接) [命令名称]
 简要描述，体现可以实现的功能，如可以操作pdf文件.
-官网链接
+
 ## 安装
+### windows
 ```sh
-# windows
-# mac
-# linux
+
+```
+### linux
+```sh
+
 ```
 ## 主要参数
 ```sh
@@ -18,13 +21,12 @@
 ---
 ---
 
-# aria2 [aria2c]
+# [aria2](https://aria2.github.io/) [aria2c]
 aria2 是一个用于下载文件的工具。
-https://aria2.github.io/
 
 ## 安装
+### windows
 ```sh
-# windows
 winget install --source winget -i --id aria2.aria2
 ```
 ## 主要参数
@@ -38,12 +40,12 @@ winget install --source winget -i --id aria2.aria2
 ```
 ---
 
-# ffmpeg
+# [ffmpeg](https://ffmpeg.org/)
 ffmpeg 是处理音频文件的工具。
-https://ffmpeg.org/
+
 ## 安装
+### windows
 ```sh
-# windows
 winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 ```
 ## 主要参数
@@ -67,12 +69,12 @@ winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 ```
 ---
 
-# imagemagick [magick]
+# [imagemagick](https://imagemagick.org/) [magick]
 imagemagick 是可以用于图像批处理的工具。
-https://imagemagick.org/
+
 ## 安装
-```sh
-# windows
+### windows
+```pwsh
 winget install --source winget -i --id ImageMagick.ImageMagick # Q16-HDR, 仅支持16bit图像
 ```
 ## 主要参数
@@ -88,15 +90,15 @@ https://imagemagick.org/script/command-line-processing.php#:~:text=the%20geometr
 "200x100!" # 按缩放到目标尺寸200px*100px，宽高比例可能变化
 ```
 ---
-# peazip [7z,zstd]
+# [peazip](http://www.peazip.org/) [7z,zstd]
 peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gzip，zstd等工具。
-http://www.peazip.org/
+
 ## 安装
-```sh
-# windows
+### windows
+```pwsh
 winget install --source winget -i --id Giorgiotani.Peazip
 ```
-## 添加到powshell
+#### 添加到powshell
 将以下内容写入`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
 ```sh
 function 7z { 
@@ -110,10 +112,15 @@ function zstd {
 ```
 ---
 
-# qpdf
+# [qpdf](https://github.com/qpdf/qpdf)
 qpdf 可以完成对pdf的常用操作，如：合并，拆分，加密等.
-https://github.com/qpdf/qpdf
-## 添加到powshell
+
+## 安装
+### windows
+```sh
+winget install --source winget -i --id QPDF.QPDF
+```
+#### 添加到powshell
 将以下内容写入我的文档`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
 ```sh
 function qpdf {
