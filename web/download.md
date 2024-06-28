@@ -17,5 +17,5 @@ aria2c -c -x16 -s64 -j8 -d $download_to_dir -i url.txt
 
 # bilibili
 1. 先安装油猴插件[Bilibili Evolved](https://github.com/the1812/Bilibili-Evolved).
-2. 打开视频，左侧功能按钮，下载视频，选择输出方式为aria2 input
+2. 打开视频，左侧功能按钮，下载视频，选择输出方式为aria2 input，输出.txt文件
 3. 使用[多文件](#多文件)中的aria2c方式下载
