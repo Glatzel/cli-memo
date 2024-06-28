@@ -32,8 +32,8 @@ winget install --source winget -i --id aria2.aria2
 -c --continue # 开启断点续传
 -d # 下载目录
 -i # 从文件读取url
--j --max-concurrent-downloads # 同时下载任务数，默认5
--s --split # 下载一个文件的连接数量，默认5
+-j --max-concurrent-downloads # 最大同时下载任务数，默认5
+-s --split # 最大总连接数量，默认5
 -x --max-connection-per-server # 每个服务器最大连接数量，默认1
 ```
 ---
