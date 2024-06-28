@@ -15,7 +15,7 @@
 ```
 ````
 # windows
-若无特别说明，语法为powershell.
+若无特别说明，默认使用powershell 7.
 
 # linux
 使用xx系统，xxsh

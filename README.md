@@ -98,7 +98,7 @@ peazip 是用于创建和解压归档文件的命令行工具，整合了7z，gz
 ```pwsh
 winget install --source winget -i --id Giorgiotani.Peazip
 ```
-将以下内容写入`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
+powershell 配置
 ```sh
 function 7z { 
     try { & "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe" $args }
@@ -123,7 +123,7 @@ qpdf 可以完成对pdf的常用操作，如：合并，拆分，加密等.
 ```sh
 winget install --source winget -i --id QPDF.QPDF
 ```
-将以下内容写入我的文档`C:$env:HOMEPATH/Documents/PowerShell/profile.ps1`
+powershell 配置
 ```sh
 function qpdf {
     try {& "$env:ProgramFiles/qpdf/bin/qpdf.exe" $args}
