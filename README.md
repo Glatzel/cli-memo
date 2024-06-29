@@ -130,6 +130,10 @@ function qpdf {
     catch {Write-Error "Peazip is not installed."}
 }
 ```
+## 主要参数
+```sh
+--pages # https://qpdf.readthedocs.io/en/stable/cli.html#id25
+```
 ---
 
 # tar
