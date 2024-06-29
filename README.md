@@ -68,16 +68,25 @@ winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 -an # 无音频
 ```
 ---
+# [oiiotool](https://openimageio.readthedocs.io/en/latest/oiiotool.html) [hoiiotool]
+oiiotool 是可以用于图像批处理的工具,支持32bit，支持oiio。
+## 安装
+### windows
+1. 安装houdini
+2. powershell 配置
+```pwsh
+$hoiiotool = (Get-ChildItem "$env:ProgramFiles/Side Effects Software/Houdini ??.?.???" | Sort-Object -Property Name -Descending | select -first 1).FullName + "/bin/hoiiotool.exe"
+```
 
 # [imagemagick](https://imagemagick.org/) [magick]
 imagemagick 是可以用于图像批处理的工具。
 > [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
+> 截至2024-06-30，imagemagick仅支持16bit图像，即使编译使用Q32-HDR选项。
 
 ## 安装
 ### windows
 ```pwsh
-winget install --source winget -i --id ImageMagick.ImageMagick # Q16-HDR, 仅支持16bit图像
+winget install --source winget -i --id ImageMagick.ImageMagick
 ```
 ## 主要参数
 ### 图像尺寸
@@ -102,18 +111,9 @@ winget install --source winget -i --id Giorgiotani.Peazip
 ```
 powershell 配置
 ```sh
-function 7z { 
-    try { & "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe" $args }
-    catch { Write-Error "Peazip is not installed." } 
-}
-function pea {
-    try { & "$env:ProgramFiles/PeaZip/pea.exe" $args }
-    catch { Write-Error "Peazip is not installed." } 
-}
-function zstd {
-    try { & "$env:ProgramFiles/PeaZip/res/bin/zstd/zstd.exe" $args }
-    catch { Write-Error "Peazip is not installed." } 
-}
+$7z = "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe"
+$pea = "$env:ProgramFiles/PeaZip/pea.exe"
+$zstd = "$env:ProgramFiles/PeaZip/res/bin/zstd/zstd.exe"
 ```
 ---
 
@@ -127,10 +127,7 @@ winget install --source winget -i --id QPDF.QPDF
 ```
 powershell 配置
 ```sh
-function qpdf {
-    try {& "$env:ProgramFiles/qpdf/bin/qpdf.exe" $args}
-    catch {Write-Error "Peazip is not installed."}
-}
+$qpdf = "$env:ProgramFiles/qpdf/bin/qpdf.exe"
 ```
 ## 主要参数
 ```sh
