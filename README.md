@@ -71,6 +71,8 @@ winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 
 # [imagemagick](https://imagemagick.org/) [magick]
 imagemagick 是可以用于图像批处理的工具。
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
 
 ## 安装
 ### windows
