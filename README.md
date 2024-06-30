@@ -91,9 +91,9 @@ imagemagick 是可以用于图像批处理的工具。
 winget install --source winget -i --id ImageMagick.ImageMagick
 ```
 ## 主要参数
-### 图像尺寸
-https://imagemagick.org/script/command-line-processing.php#:~:text=the%20geometry%20argument.-,size,-General%20description%20(actual
 ```sh
+# 图像尺寸
+# https://imagemagick.org/script/command-line-processing.php#:~:text=the%20geometry%20argument.-,size,-General%20description%20(actual
 "200%" # 放大2倍
 "200x50%" # 200px宽，高度缩放为50% 
 "200" # 宽度200px，高度按比例缩放
