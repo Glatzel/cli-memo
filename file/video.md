@@ -13,3 +13,7 @@ ffmpeg -i input.mp4 -an -c:v copy output.mp4
 ```
 ---
 # 转换/压缩
+```sh
+# 直接转换格式，不做任何修改
+ffmpeg -i input.mkv output.mp4
+```
