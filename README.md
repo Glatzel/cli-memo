@@ -75,7 +75,10 @@ oiiotool 是可以用于图像批处理的工具,支持32bit，支持oiio。
 1. 安装houdini
 2. powershell 配置
 ```pwsh
-$hoiiotool = (Get-ChildItem "$env:ProgramFiles/Side Effects Software/Houdini ??.?.???" | Sort-Object -Property Name -Descending | select -first 1).FullName + "/bin/hoiiotool.exe"
+function hoiiotool { 
+$hpath= Get-ChildItem "$env:ProgramFiles/Side Effects Software/Houdini ??.?.???" | Sort-Object -Property Name -Descending | select -first 1 
+& "$hpath/bin/hoiiotool.exe" @args
+}
 ```
 
 # [imagemagick](https://imagemagick.org/) [magick]
@@ -111,9 +114,18 @@ winget install --source winget -i --id Giorgiotani.Peazip
 ```
 powershell 配置
 ```sh
-$7z = "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe"
-$pea = "$env:ProgramFiles/PeaZip/pea.exe"
-$zstd = "$env:ProgramFiles/PeaZip/res/bin/zstd/zstd.exe"
+function 7z { 
+    try { & "$env:ProgramFiles/PeaZip/res/bin/7z/7z.exe" @args }
+    catch { Write-Error "Peazip is not installed." } 
+}
+function pea {
+    try { & "$env:ProgramFiles/PeaZip/pea.exe" @args }
+    catch { Write-Error "Peazip is not installed." } 
+}
+function zstd {
+    try { & "$env:ProgramFiles/PeaZip/res/bin/zstd/zstd.exe" @args }
+    catch { Write-Error "Peazip is not installed." } 
+}
 ```
 ---
 
@@ -127,7 +139,10 @@ winget install --source winget -i --id QPDF.QPDF
 ```
 powershell 配置
 ```sh
-$qpdf = "$env:ProgramFiles/qpdf/bin/qpdf.exe"
+function qpdf{
+    try {& "$env:ProgramFiles/qpdf/bin/qpdf.exe" @args}
+    catch {Write-Error "Peazip is not installed."}
+}
 ```
 ## 主要参数
 ```sh

@@ -25,5 +25,5 @@ magick input-*.png -evaluate-sequence mean -depth 16 out.tiff
 ```sh
 $imgs=Get-ChildItem *.exr
 $count=@($imgs).Count
-& $hoiiotool ($imgs).fullname --add --divc "$count.0" -o out.exr
+hoiiotool ($imgs).fullname --add --divc "$count.0" -o out.exr
 ```
