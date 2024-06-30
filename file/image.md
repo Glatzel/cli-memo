@@ -22,8 +22,22 @@ magick -list evaluate
 magick input-*.png -evaluate-sequence mean -depth 16 out.tiff 
 ```
 ## oiiotool
-```sh
-$imgs=Get-ChildItem *.exr
-$count=@($imgs).Count
-hoiiotool ($imgs).fullname --add --divc "$count.0" -o out.exr
+powershell
+```pwsh
+function stack_mean($ext = "exr", $dir = $pwd, $out_stem = "out") {
+    $imgs = Get-ChildItem "$dir/*.$ext"
+    $count = @($imgs).Count
+    $out_file = "$dir/$out_stem.exr"
+    if (“$out_stem.exr" -in $imgs.Name) {
+        Write-Error "$out_stem.$ext in input image files."
+        return -1
+    }
+    $option = @("--info", $imgs[0])
+    for ($i = 1; $i -lt $count; $i = $i + 1) {
+        $option += $imgs[$i], "-add"
+    }
+    $option += "-divc", "$count.0", "-o", "$out_file"
+    hoiiotool  $option
+}
+stack_mean
 ```
