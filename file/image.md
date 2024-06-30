@@ -15,6 +15,8 @@ magick -background none -size 1000x1000 in.svg out.png
 ## imagemagick
 > [!WARNING]  
 > 截至2024-06-30，imagemagick仅支持16bit图像，即使编译使用Q32-HDR选项。
+> Imagemagick使用与最大值最小值堆栈。
+> 平均值堆栈推荐使用[oiiotool](#oiiotool)
 ```sh
 # 查看堆栈方法
 magick -list evaluate
