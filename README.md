@@ -5,7 +5,7 @@
 
 ## 安装
 ### windows
-```sh
+```pwsh
 
 ```
 ### linux
@@ -26,7 +26,7 @@ aria2 是一个用于下载文件的工具。
 
 ## 安装
 ### windows
-```sh
+```pwsh
 winget install --source winget -i --id aria2.aria2
 ```
 ## 主要参数
@@ -45,7 +45,7 @@ ffmpeg 是处理音频文件的工具。
 
 ## 安装
 ### windows
-```sh
+```pwsh
 winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 ```
 ## 主要参数
@@ -134,7 +134,7 @@ qpdf 可以完成对pdf的常用操作，如：合并，拆分，加密等.
 
 ## 安装
 ### windows
-```sh
+```pwsh
 winget install --source winget -i --id QPDF.QPDF
 ```
 powershell 配置
