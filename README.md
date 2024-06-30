@@ -83,7 +83,7 @@ $hpath= Get-ChildItem "$env:ProgramFiles/Side Effects Software/Houdini ??.?.???"
 # [imagemagick](https://imagemagick.org/) [magick]
 imagemagick 是可以用于图像批处理的工具。
 > [!WARNING]  
-> 截至2024-06-30，imagemagick仅支持16bit图像，即使编译使用Q32-HDR选项。
+> 截至2024-06-30，即使编译使用Q32-HDR选项，imagemagick最高也仅能支持16bit图像。
 
 ## 安装
 ### windows
