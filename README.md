@@ -138,7 +138,7 @@ winget install --source winget -i --id QPDF.QPDF
 ```
 powershell 配置
 ```sh
-function qpdf{
+function qpdf {
     try {& "$env:ProgramFiles/qpdf/bin/qpdf.exe" @args}
     catch {Write-Error "Peazip is not installed."}
 }
