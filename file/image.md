@@ -1,4 +1,4 @@
-# 缩放/转换
+# 压缩/缩放/转换
 ```sh
 # 单张图片
 magick input.png -resize 800x600 -quality 92 output.jpg
@@ -42,4 +42,9 @@ function stack_mean($ext = "exr", $dir = $pwd, $out_stem = "out") {
     hoiiotool  $option
 }
 stack_mean
+```
+
+# 图片信息
+```sh
+magick identify -verbose a.png
 ```
