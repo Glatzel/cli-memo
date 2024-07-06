@@ -8,6 +8,8 @@
 ```
 ### lzma2
 ```sh
+# 将dir1压缩为archive.7z,目标格式7z，lzma2方法，压缩级别9，单词大小64byte，字典大小32m，固实压缩，开启多线程
+7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on -mmt=on archive.7z dir1
 ```
 ### zip
 ```sh
@@ -25,7 +27,7 @@ tar -czvf archive.tar.gz file1 file2 directory
 & $zstd -T0 -7 --long=31 file  -o "archive.zst"
 
 # 多文件
-& $7z a -ttar "-w$workdir" -bb0 -bse0 -bsp2 "archive.tar" "$folder" # pack to single tar file
+& $7z a -ttar "-w$workdir" "archive.tar" "$folder" # pack to single tar file
 & $zstd -T0 -19 --long=31 "archive.tar" -o "archive.tar.zst" # pack to zst
 & $pea WIPE QUICK "archive.tar" # remove temp tar file.
 ```
@@ -55,6 +57,6 @@ tar -xvf archive.tar -C /somedir
 
 # 多文件
 & $zstd -d "archive.tar.zst" -o "archive.tar" --long=31 # Unpack to tar file
-& $7z x -aos -bb0 -bse0 -bsp2 "-o$outdir" -sccUTF-8 -snz "archive.tar" # pack to files
+& $7z x "-o$outdir" "archive.tar" # pack to files
 & $pea "archive.tar" # remove temp tar file.
 ```

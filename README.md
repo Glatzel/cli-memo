@@ -127,6 +127,17 @@ function zstd {
     catch { Write-Error "Peazip is not installed." } 
 }
 ```
+## 主要参数
+```sh
+# 7z
+-t7z # 目标格式
+-m0=LZMA2 #压缩方法
+-mmt=on # 是否开启多线程
+-mx=1 # 压缩级别，0-9，与压缩率和压缩时间正相关
+-md=1024m # 字典大小，与压缩率和压缩时间正相关
+-mfb=273 # 单词大小，与压缩率和压缩时间正相关
+-ms=on # 块大小，on为固实压缩
+```
 ---
 
 # [qpdf](https://github.com/qpdf/qpdf)
