@@ -50,20 +50,21 @@ winget install --source winget -i --id Gyan.FFmpeg # ffmpeg-full
 ## 主要参数
 ```sh
 -i # 设定输入流 
--f # 设定输出格式
+-f # 设定输入输出格式，-formats查看所有格式
 -ss #开始时间
 
 # 视频参数
 -aspect # 设定画面的比例
+--pix_fmt # 像素格式，-pix_fmts查看所有像素格式
 -r # 设定帧速率，默认为25
--s # 设定画面的宽与高
--vcodec -c:v # 设定视频编解码器，未设定时则使用与输入流相同的编解码器
+-s # 分辨率
+-vcodec -c:v # 设定视频编解码器，未设定时则使用与输入流相同的编解码器,-codecs查看所有编解码器
 -vn # 无视频
 
 # 音频参数
 -ar # 音频采样率
 -ac # 设定声音的Channel数
--acodec -c:a # 设定声音编解码器，未设定时则使用与输入流相同的编解码器
+-acodec -c:a # 设定声音编解码器，未设定时则使用与输入流相同的编解码器，-codecs查看所有编解码器
 -an # 无音频
 ```
 ---
