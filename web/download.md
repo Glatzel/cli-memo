@@ -1,7 +1,7 @@
 # 单文件
 ```sh
-# 开启断点续传, 总连接数量=单个url连接数量=16
-aria2c -c -x16 -s16 -d $download_to_dir $url --all-proxy=http://proxy:8080
+# 开启断点续传, 总连接数量=单个url连接数量=16,重命名,使用代理
+aria2c -c -x16 -s16 -d $download_to_dir $url -o newname.exe --all-proxy=http://127.0.0.1:10809
 ```
 
 ---
